@@ -1,0 +1,27 @@
+# House-Price-Prediction-using-Linear-Regression-and-ANN
+Using a dataset consisting of different attributes of houses we want to predict the median house values. For the prediction we use a **Linear Regression Model** and an **Artificial Neural Network**.
+
+## Dataset
+The dataset is provided by the **sklearn library**, it can be found under the following link: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html#sklearn.dataset
+
+In above website the dataset is describes as:
+
+“This dataset was derived from the 1990 U.S. census, using one row per census block group. A block group is the smallest geographical unit for which the U.S. Census Bureau publishes sample data (a block group typically has a population of 600 to 3,000 people).”
+
+The dataset consists of different attributes such as the median income in a block, the median house age etc. The **target variable** is the **median house value** for Californian districts.
+
+## Prediction task
+Our dataset can be used for answering a typical regression problem. We have as an input the different attributes or variables of houses in Californian districts. The tasks for our algorithms to solve is to **predict the median house values for these input variables**.
+
+## Prediction Algorithms
+The algorithms used to predict the median house value for Californian districts are **Linear Regression** and a **Neural Network with 1 hidden layer with various hidden units**. The goal is to **compare the performance** of these two Models.
+
+## Evaluation
+The dataset is **split into a training set and a test set** with the ratio of 80/20. After training the models the **means square error** for both algorithms is calculated using the test set.
+
+The Results show, that the mean square error for linear regression is 0.5289841670367237 whereas for the neural network with 5 hidden units it is only slightly higher with 0.5360735751603599.
+
+## Discussion
+Linear Regression delivers a quite good performance for our problem. But depending on the accuracy we want to achieve it might be a too simple prediction algorithm. The Neural Network can possibly deliver better predictions; the difficulty here however is, to choose an **appropriate number of hidden layers and hidden units for each layer**. For example by using 100 hidden units instead of 5 we get a much smaller mean square error of 0.46813540526632036. With this setup the Neural Network outperforms the linear regression algorithm. If we use two hidden layers with 100 hidden units and 5 hidden units for the second hidden layer then we get even better results: 0.461083142309885.
+
+Another important issue for the performance of the neural network are **the activation functions**. These can be adjusted for each hidden layer(as well as the output layer) individually. We have used the **sigmoid function**. If we would use for example the **tanh function** for our first neural network(one hidden layer with 5 hidden units) we would get a much higher mean square error: 1.303129043819514.
