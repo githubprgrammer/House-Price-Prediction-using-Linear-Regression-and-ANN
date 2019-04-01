@@ -2,7 +2,7 @@
 Using a dataset consisting of different attributes of houses we want to predict the median house values. For the prediction we use a **Linear Regression Model** and an **Artificial Neural Network**.
 
 ## Dataset
-The dataset is provided by the **sklearn library**, it can be found under the following link: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html#sklearn.dataset
+The dataset is provided by the **scikit-learn library**, it can be found under the following link: https://scikit-learn.org/stable/modules/generated/.datasets.fetch_california_housing.html#sklearn.dataset
 
 In above website the dataset is describes as:
 
